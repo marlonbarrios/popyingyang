@@ -1,12 +1,12 @@
 
 let canvas;
 
-let numCells = 15.3
+let numCells = 11.2
 
 
 function setup() {
   createCanvas(1024, 1024);
-  noLoop();
+  frameRate(1);
   mbsFramework();
   credits();
 }
@@ -29,15 +29,13 @@ function draw() {
     rect(0 + i, 0 + j, step, step)
     fill(255)
     circle(0 + i, 0 + j, step/2, step/2)
-     fill(255)
-    circle(0 + i, 0 + j, step/4, step/4)
+    
   } else {
     fill(255)
     rect(0 + i, 0 + j, step, step)
     fill(0)
     circle(0 + i, 0 + j, step/2, step/2)
-    fill(255)
-    circle(0 + i, 0 + j, step/4, step/4)
+  
    }
 }
 }
@@ -51,6 +49,7 @@ function keyPressed() {
   if (key == 'S' || key == 's') 
     saveCanvas(canvas, 'canvas' + m + d + y + t , 'png');
 }
+
   
 function windowResized() {
 
