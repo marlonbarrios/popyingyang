@@ -1,7 +1,7 @@
 
 let canvas;
 
-let cellSize = 50;
+let cellSize = 60;
 
 function setup() {
   createCanvas(1024, 1024);
