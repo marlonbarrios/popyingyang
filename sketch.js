@@ -1,7 +1,8 @@
 
 let canvas;
 
-let cellSize = 60;
+let numCells = 15.3
+
 
 function setup() {
   createCanvas(1024, 1024);
@@ -13,14 +14,14 @@ function setup() {
 function draw() {
   rectMode(CENTER)
 
-  let step = cellSize;
+  let step = width/numCells;
   noStroke();
 
   background(255);
   let x = 0;
   let y = 0;
-  for(var i = x; i < width; i += step) {
-  for(var j = y; j < height; j+= step) {
+  for(var i = x; i < width; i += step + 1) {
+  for(var j = y; j < height; j+= step +1) {
 
     let r = Math.random() >= 0.5;
     if(r > 0.5) {
@@ -80,7 +81,7 @@ function mbsFramework() {
 function credits() {
 //credits
   createP("Pop Ying-Yang");
-  createP("Grid Study with squares-circles and back and white. Inspireg by the work of Vasarelli" );
+  createP("Grid Study with squares-circles and back-white encapsulation. Inspired by the work of Victor Vasareli" );
   createP("Press 's' to save a png image");
   var link =createA("https://marlonbarrios.github.io/", "Programmed by Marlon Barrios Solano");
 
